@@ -354,6 +354,14 @@ static void push_in_rule(char* key, char* value, rule_t* rules)
     }
 }
 
+
+/*
+этот метод отвечает за загрузку файлов из файла rules_full-Match.txt 
+с последующим заносом в массив структур rules. находится в стадии 
+разработки и как временная мера вся логика реализована через if else.
+в будущем логика будет заменена на хеш таблицы
+*/
+
 bool load_rules(FILE* rules_file, rule_t* rules, size_t count)
 {
     bool parse_result = false;
