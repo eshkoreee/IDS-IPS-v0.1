@@ -1,5 +1,0 @@
-sid=1 severity=HIGH proto=tcp dport=80 flags=S ttl=1 dst_ip=192.168.31.0/24 msg="SYN scan with TTL=1 to local web"
-sid=2 severity=INFO proto=icmp icmp_type=8 msg="ICMP Echo Request"
-sid=3 severity=MEDIUM proto=tcp dport=4444 msg="Metasploit default port"
-sid=4 severity=MEDIUM eth_dst=ff:ff:ff:ff:ff:ff proto=arp msg="Broadcast ARP"
-sid=5 severity=LOW proto=tcp dport=22 msg="SSH connection attempt"
