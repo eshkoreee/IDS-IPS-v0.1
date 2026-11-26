@@ -183,6 +183,12 @@ static void write_icmpv6(FILE* f, struct packet* pkt)
     fputc(',', f);
 }
 
+/*
+этот метод отвечает за валидную запись пакета в .ndjson файл путем вызова методов
+с приставкой write_*. ipv6 временно не работает из за временно невыявленных логических
+ошибок. в логе не обращать на это внимания
+*/
+
 int write_json(FILE* f, struct packet* pkt)
 {
 
@@ -200,7 +206,7 @@ int write_json(FILE* f, struct packet* pkt)
     
     
     off_t pos = ftello(f);
-    fseeko(f, pos - 1, SEEK_SET);   // ← FILE* теперь на месте обрезки
+    fseeko(f, pos - 1, SEEK_SET);
     fputs("}\n", f);
     return 0;
 }
