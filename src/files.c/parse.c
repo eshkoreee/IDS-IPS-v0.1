@@ -13,6 +13,13 @@
 
 #include "structures.h"
 
+/*
+в этом файле реализованы методы которым на вход дают 
+сырой пакет а их задачей является занос байтов из уже 
+заранее распарсеных системных структур в структуру packet
+этим занимаются методы с приставкой parse_*
+*/
+
 void parse_ether(struct packet* pkt, const uint8_t* p, size_t caplen)
 {
     if(caplen < ETH_LEN) return;
